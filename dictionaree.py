@@ -7,7 +7,7 @@ import string
 import youdao
 import collins
 
-VERSION = "v0.3.1"
+VERSION = "v0.3.2"
 
 def help():
 	print("Dictionaree commands:")
@@ -20,6 +20,7 @@ def help():
 	print("\t\tb: Both dictionaries")
 	print("generate, g\tGenerate `dictionaree.html`")
 	print("version, v\tShow version information")
+	print("clear, c\t\tClear saved list of words")
 
 def cmdToAbbr(text: str) -> str:
 	cmds = {
@@ -28,7 +29,8 @@ def cmdToAbbr(text: str) -> str:
 		"add": "a",
 		"dict": "d",
 		"generate": "g",
-		"version": "v"
+		"version": "v",
+		"clear": "c"
 	}
 	r = cmds.get(text, None)
 	if (r):
@@ -129,5 +131,8 @@ while (1):
 			os.startfile("Dictionaree.html")
 	elif (kw == "v"):
 		print(VERSION)
+	elif (kw == "c"):
+		i = []
+		d = []
 	else:
 		print("Unknown command `%s`" % kw)
