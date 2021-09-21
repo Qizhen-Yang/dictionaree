@@ -18,5 +18,5 @@ def search(word):
 		newitem = newitem.replace("<a", "<span")
 		newitem = newitem.replace("</a>", "</span>")
 		d = newitem
-		print("Added word:", word, "[Youdao]")
+		print("[Youdao]", "Added word:", word)
 	return d

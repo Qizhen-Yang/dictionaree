@@ -9,7 +9,7 @@ import collins
 
 clear = os.system("cls")
 
-print("Dictionaree v0.2.1")
+print("Dictionaree v0.2.2")
 print("Copyright (c) 2021 Qizhen Yang")
 print("Dictionaree is a FREE software.")
 print(" *  GitHub repo: Qizhen-Yang/dictionaree")
@@ -33,7 +33,7 @@ if i == []:
 	print("Nothing to show. XD")
 else:
 	for word in i:
-		d.append([youdao.search(word), "<br/>", collins.search(word)])
+		d.append(["[Youdao]", youdao.search(word), "[Collins]", collins.search(word)])
 
 	f = open("Dictionaree.html", "w+", encoding = "utf-8")
 	f.write("<meta charset='utf-8'/>")
